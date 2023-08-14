@@ -1,6 +1,15 @@
 #!/usr/bin/python3
 
 def canUnlockAll(boxes):
+    """unlock funtion
+
+    Args:
+        boxes: list of lists of integer that represent the number of a key
+
+    Returns:
+        True if all unlocked
+    """
+
     n = len(boxes)
     unlocked = [False] * n
     # box 0 ouverte
