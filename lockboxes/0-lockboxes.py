@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 
+
 def canUnlockAll(boxes):
     """unlock funtion
 
     Args:
-        boxes: list of lists of integer that represent the number of a key
+        boxes: list of lists of integer
+        that represent the number of a key
 
     Returns:
         True if all unlocked
@@ -26,5 +28,6 @@ def canUnlockAll(boxes):
                 unlocked[key] = True
                 # ajout d une nouvelle clé
                 keys.append(key)
-    # quand il y a plus de clés: on retoune le résultat d'un ET logique sur la liste unlocked
+    # quand il y a plus de clés: on retoune le
+    # résultat d'un ET logique sur la liste unlocked
     return all(unlocked)
