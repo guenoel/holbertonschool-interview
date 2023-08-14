@@ -1,14 +1,21 @@
 #!/usr/bin/python3
 
+"""
+Module lockboxes
+"""
 
 def canUnlockAll(boxes):
-    """unlock funtion
+    """
+    canUnlockAll funtion
 
-    Args:
-        boxes: list of lists of integer
-        that represent the number of a key
+    Parameters
+    ----------
+    boxes : list of lists of integer
+        The integer represent the number of a key
 
-    Returns:
+    Returns
+    -------
+        Bool
         True if all unlocked
     """
 
