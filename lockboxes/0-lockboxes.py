@@ -4,6 +4,7 @@
 Module lockboxes
 """
 
+
 def canUnlockAll(boxes):
     """
     canUnlockAll funtion
@@ -30,7 +31,7 @@ def canUnlockAll(boxes):
         # current_box sera 0 au premier tour
         current_box = keys.pop()
         for key in boxes[current_box]:
-            if not unlocked[key]:
+            if not unlocked[key] and key < n:
                 # stockage de l info
                 unlocked[key] = True
                 # ajout d une nouvelle clé
