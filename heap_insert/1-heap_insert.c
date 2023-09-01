@@ -80,8 +80,8 @@ tree_queue *enqueue(tree_queue **node_queue, heap_t *current_node)
 *
 * Return: Pointer to the new_node node
 */
-heap_t *push_insert(heap_t *current_node, tree_queue **node_queue, heap_t **new_node,
-					heap_t **direction, int value)
+heap_t *push_insert(heap_t *current_node, tree_queue **node_queue,
+					heap_t **new_node, heap_t **direction, int value)
 {
 	if (*direction)
 	{
@@ -118,9 +118,11 @@ heap_t *order(heap_t **root, int value)
 	{
 		current_node = current_q->node;
 		if (!new_node)
-			push_insert(current_node, &current_q, &new_node, &current_node->left, value);
+			push_insert(current_node, &current_q,
+					&new_node, &current_node->left, value);
 		if (!new_node)
-			push_insert(current_node, &current_q, &new_node, &current_node->right, value);
+			push_insert(current_node, &current_q,
+					&new_node, &current_node->right, value);
 		if (flag_error)
 			return (NULL);
 		delete_n_queue(&current_q);
