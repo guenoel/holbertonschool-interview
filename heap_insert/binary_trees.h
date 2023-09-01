@@ -34,10 +34,10 @@ typedef struct tree_queue
 } tree_queue;
 
 /* Prototype Functions*/
-void restore_max_heap_property(heap_t **inserted);
+void restore_max_heap_property(heap_t **new_node);
 void delete_n_queue(tree_queue **node_queue);
-tree_queue *enqueue(tree_queue **node_queue, heap_t *c_node);
-heap_t *push_insert(heap_t *c_node, tree_queue **node_queue, heap_t **inserted,
+tree_queue *enqueue(tree_queue **node_queue, heap_t *current);
+heap_t *push_insert(heap_t *current, tree_queue **node_q, heap_t **new_node,
 					heap_t **direction, int value);
 void binary_tree_print(const binary_tree_t *);
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
