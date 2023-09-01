@@ -14,7 +14,8 @@ void restore_max_heap_property(heap_t **new_node)
 	heap_t *current_node;
 	int tmp;
 
-	for (current_node = *new_node; current_node->parent; current_node = current_node->parent)
+	for (current_node = *new_node; current_node->parent;
+		current_node = current_node->parent)
 		if (current_node->n > current_node->parent->n)
 		{
 			tmp = current_node->parent->n;
@@ -52,7 +53,7 @@ void delete_n_queue(tree_queue **node_queue)
 tree_queue *enqueue(tree_queue **node_queue, heap_t *current_node)
 {
 	tree_queue **current_q;
-    tree_queue *new_node_q = (tree_queue *)malloc(sizeof(*new_node_q));
+	tree_queue *new_node_q = (tree_queue *)malloc(sizeof(*new_node_q));
 
 	if (!new_node_q)
 		return (NULL);
