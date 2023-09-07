@@ -3,6 +3,7 @@
 Find minimum operations with copy - paste to have n numbers of characters.
 """
 
+
 # use of primary numbers
 def minOperations(n):
     # d = 2 => smallest primary number
@@ -17,5 +18,3 @@ def minOperations(n):
     if n > 1:
         op += n
     return op
-        
-
