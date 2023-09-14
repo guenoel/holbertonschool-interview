@@ -16,6 +16,15 @@ void print_grid2(int **grid)
 	}
 }
 
+void free_grid(int **grid)
+{
+	int i;
+
+	for (i = 0; i < 3; i++)
+		free(grid[i]);
+	free(grid);
+}
+
 int **sandpile_reduc(int **grid)
 {
 	int i, j, num;
@@ -55,7 +64,7 @@ int **sandpile_reduc(int **grid)
 			}
 		}
 	}
-	free(grid);
+	free_grid(grid);
 	return (next_grid);
 }
 
@@ -73,6 +82,7 @@ int sandpiles_check(int **grid)
 	}
 	return (0);
 }
+
 void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 {
 	int i, j;
@@ -96,5 +106,5 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 		for (j = 0; j < 3; j++)
 			grid1[i][j] = grid_sum[i][j];
 	}
-	free(grid_sum);
+	free_grid(grid_sum);
 }
