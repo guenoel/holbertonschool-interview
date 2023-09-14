@@ -1,5 +1,10 @@
 #include "sandpiles.h"
 
+/**
+ * init_grid - init 3x3 grid
+ * @grid: 3x3 grid
+ *
+ */
 void init_grid(int grid[3][3])
 {
 	int i, j;
@@ -11,6 +16,11 @@ void init_grid(int grid[3][3])
 	}
 }
 
+/**
+ * sandpile_reduc - topple 3x3 grid of sandboxes
+ * @grid: 3x3 grid
+ *
+ */
 void sandpile_reduc(int grid[3][3])
 {
 	int i, j, num;
@@ -52,6 +62,12 @@ void sandpile_reduc(int grid[3][3])
 	}
 }
 
+/**
+ * sandpiles_check - check stability of 3x3 grid
+ * @grid: 3x3 grid
+ *
+ * Return: 1 if sandpile is not stable, 0 if it is
+ */
 int sandpiles_check(int grid[3][3])
 {
 	int i, j;
@@ -67,22 +83,32 @@ int sandpiles_check(int grid[3][3])
 	return (0);
 }
 
+/**
+ * print_grid - Print 3x3 grid
+ * @grid: 3x3 grid
+ *
+ */
 void print_grid(int grid[3][3])
 {
-    int i, j;
+	int i, j;
 
-    for (i = 0; i < 3; i++)
-    {
-        for (j = 0; j < 3; j++)
-        {
-            if (j)
-                printf(" ");
-            printf("%d", grid[i][j]);
-        }
-        printf("\n");
-    }
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 3; j++)
+		{
+			if (j)
+				printf(" ");
+			printf("%d", grid[i][j]);
+		}
+		printf("\n");
+	}
 }
 
+/**
+ * sandpiles_sum - make sum od two 3x3 grid
+ * @grid1: 3x3 grid
+ * @grid2: 3x3 grid
+ */
 void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 {
 	int i, j;
