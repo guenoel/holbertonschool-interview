@@ -21,7 +21,7 @@ int **sandpile_reduc(int **grid)
 	int i, j, num;
 	int **next_grid;
 	next_grid = (int **)malloc(sizeof(int *) * 3);
-	for (int i = 0; i < 3; i++)
+	for (i = 0; i < 3; i++)
 		next_grid[i] = (int *)malloc(sizeof(int) * 3);
 
 	for (i = 0; i < 3; i++)
@@ -78,7 +78,7 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 	int i, j;
 	int **grid_sum;
 	grid_sum = (int **)malloc(sizeof(int *) * 3);
-	for (int i = 0; i < 3; i++)
+	for (i = 0; i < 3; i++)
 		grid_sum[i] = (int *)malloc(sizeof(int) * 3);
 
 	printf("=\n");
