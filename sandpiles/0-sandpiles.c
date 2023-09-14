@@ -85,17 +85,18 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 	for (i = 0; i < 3; i++)
 	{
 		for (j = 0; j < 3; j++)
-		{
 			grid_sum[i][j] = grid1[i][j] + grid2[i][j];
-			printf("%d ", grid_sum[i][j]);
-		}
-		printf("\n");
 	}
 	while(sandpiles_check(grid_sum))
 	{
 		printf("=\n");
-		grid_sum = sandpile_reduc(grid_sum);
 		print_grid2(grid_sum);
+		grid_sum = sandpile_reduc(grid_sum);
+	}
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 3; j++)
+			grid1[i][j] = grid_sum[i][j];
 	}
 	free(grid_sum);
 }

@@ -39,7 +39,7 @@ static void print_grid_sum(int grid1[3][3], int grid2[3][3])
  * @grid: 3x3 grid
  *
  */
-/* static void print_grid(int grid[3][3])
+static void print_grid(int grid[3][3])
 {
     int i, j;
 
@@ -53,7 +53,7 @@ static void print_grid_sum(int grid1[3][3], int grid2[3][3])
         }
         printf("\n");
     }
-} */
+}
 
 /**
  * main - Entry point
@@ -77,8 +77,8 @@ int main(void)
 
     sandpiles_sum(grid1, grid2);
 
-    /* printf("=\n");
-    print_grid(grid1); */
+    printf("=\n");
+    print_grid(grid1);
 
     return (EXIT_SUCCESS);
 }
