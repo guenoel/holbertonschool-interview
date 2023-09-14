@@ -80,8 +80,6 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 	grid_sum = (int **)malloc(sizeof(int *) * 3);
 	for (i = 0; i < 3; i++)
 		grid_sum[i] = (int *)malloc(sizeof(int) * 3);
-
-	printf("=\n");
 	for (i = 0; i < 3; i++)
 	{
 		for (j = 0; j < 3; j++)
