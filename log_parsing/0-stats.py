@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Exercice Log parsing
+"""
 import sys
 
 size = 0
