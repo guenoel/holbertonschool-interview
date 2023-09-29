@@ -33,12 +33,12 @@ def main():
                 print_result(size, status_map)
     except KeyboardInterrupt:
         """ Keyboard interruption """
-        print_result(size, status_map)
         traceback.print_exc()  # Print the traceback when interrupted
         sys.exit(1)  # Exit with a non-zero status code
-    # finally:
+    finally:
         """ """
         # Print the final statistics
+        print_result(size, status_map)
 
 
 def print_result(size, status_map):
