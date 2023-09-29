@@ -32,7 +32,6 @@ def main():
                 if len(line_parsed) >= 9:
                     size += int(line_parsed[8])
             counter += 1
-            
             if counter % 10 == 0:
                 print_result(size, status_map)
     except KeyboardInterrupt:
