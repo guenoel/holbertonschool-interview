@@ -29,8 +29,8 @@ def main():
                 if pattern.match(line_parsed[7]):
                     key = line_parsed[7]
                     status_map[key] = status_map.get(key, 0) + 1
-                    if len(line_parsed) >= 9:
-                        size += int(line_parsed[8])
+                if len(line_parsed) >= 9:
+                    size += int(line_parsed[8])
             counter += 1
             
             if counter % 10 == 0:
