@@ -23,4 +23,6 @@ def main():
             print(f"File size: {size}")
             for key, value in status_map.items():
                 print(f"{key}: {value}")
-            counter = 0
+
+if __name__ == "__main__":
+    main()
