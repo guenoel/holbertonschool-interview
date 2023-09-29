@@ -24,9 +24,9 @@ def main():
         counter += 1
         if len(line_parsed) >= 9:
             size += int(line_parsed[8])
-        if counter > 10:
+        if counter % 10 == 0:
             print("File size: {}".format(size))
-            for key, value in status_map.items():
+            for key, value in sorted(status_map.items()):
                 print("{}: {}".format(key, value))
 
 
