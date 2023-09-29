@@ -7,16 +7,14 @@ Exercice Log parsing
 
 import sys
 
-size = 0
-counter = 0
-status_map = {}
-
 
 def main():
     """
     main
     """
-
+    size = 0
+    counter = 0
+    status_map = {}
     for line in sys.stdin:
         """ jose """
         line_parsed = line.split(" ")
@@ -27,9 +25,9 @@ def main():
         if len(line_parsed) >= 9:
             size += int(line_parsed[8])
         if counter > 10:
-            print(f"File size: {size}")
+            print("File size: {}".format(size))
             for key, value in status_map.items():
-                print(f"{key}: {value}")
+                print("{}: {}".format(key, value))
 
 
 if __name__ == "__main__":
