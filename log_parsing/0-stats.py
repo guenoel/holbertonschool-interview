@@ -1,14 +1,24 @@
 #!/usr/bin/python3
-""" Exercice Log parsing """
+
+"""
+Module 0-stats
+Exercice Log parsing
+"""
+
 import sys
 
 size = 0
 counter = 0
 status_map = {}
 
+
 def main():
-    """ main """
+    """
+    main
+    """
+
     for line in sys.stdin:
+        """ jose """
         line_parsed = line.split(" ")
         if len(line_parsed) >= 8:
             key = line_parsed[7]
@@ -20,6 +30,7 @@ def main():
             print(f"File size: {size}")
             for key, value in status_map.items():
                 print(f"{key}: {value}")
+
 
 if __name__ == "__main__":
     main()
