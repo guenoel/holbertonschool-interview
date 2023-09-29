@@ -8,6 +8,7 @@ size = 0
 counter = 0
 status_map = {}
 
+
 def main():
     """ comment main """
     for line in sys.stdin:
