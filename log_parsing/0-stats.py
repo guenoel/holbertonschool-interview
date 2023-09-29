@@ -1,16 +1,13 @@
 #!/usr/bin/python3
-"""
-Exercice Log parsing
-"""
+""" Exercice Log parsing """
 import sys
 
 size = 0
 counter = 0
 status_map = {}
 
-
 def main():
-    """ comment main """
+    """ main """
     for line in sys.stdin:
         line_parsed = line.split(" ")
         if len(line_parsed) >= 8:
