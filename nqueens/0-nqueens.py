@@ -3,9 +3,11 @@
 
 import sys
 
+
 def print_solution(board):
     """Print the solution in the specified format"""
     print([[i, j] for i, j in enumerate(board)])
+
 
 def is_safe(board, row, col):
     """Check if it's safe to place a queen in a given position"""
@@ -19,6 +21,7 @@ def is_safe(board, row, col):
             return False
     return True
 
+
 def solve_nqueens(board, row, n):
     """Recursively solve the N Queens problem"""
     if row == n:
@@ -30,6 +33,7 @@ def solve_nqueens(board, row, n):
             # Place a queen and move on to the next row
             board[row] = col
             solve_nqueens(board, row + 1, n)
+
 
 def nqueens(n):
     """Main function to solve the N Queens problem"""
