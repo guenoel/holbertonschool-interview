@@ -38,7 +38,6 @@ void heapify(int *array, size_t orig_size, size_t size, size_t i)
  * @array: array to delete from
  * @orig_size: original size of array
  * @size: size of array
- * @height: height of heap
  */
 void heap_delete(int *array, size_t orig_size, size_t size)
 {
