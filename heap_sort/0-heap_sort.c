@@ -16,12 +16,9 @@ void heapify(int *array, size_t orig_size, size_t size, size_t i)
 		return;
 
 	if (left < (size - 1) && right < (size - 1))
-		if (array[left] > array[right])
-			largest = left;
-		else
-			largest = right;
+		largest = (array[left] > array[right]) ? left : right;
 	else
-		largest = array[left] ? left : right;
+		largest = (right < size) ? right : left;
 
 	if (array[largest] > array[i])
 	{
