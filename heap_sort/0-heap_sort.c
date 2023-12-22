@@ -44,11 +44,11 @@ void heap_delete(int *array, size_t orig_size, size_t size)
 	tmp = array[0];
 	array[0] = array[size - 1];
 	array[size - 1] = tmp;
-	heapify(array, orig_size, size - 1, 0);
 	/* printf("size: %lu\n", size); */
 	if (size > 1)
 	{
 		print_array(array, orig_size);
+		heapify(array, orig_size, size - 1, 0);
 		heap_delete(array, orig_size, size - 1);
 	}
 }
