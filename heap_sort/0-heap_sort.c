@@ -12,13 +12,14 @@ void heapify(int *array, size_t orig_size, size_t size, size_t i)
 	size_t largest, left = 2 * i + 1, right = 2 * i + 2;
 	int tmp;
 
-	if (left > (size - 1) && right > (size - 1))
+	if (left >= size && right >= size)
 		return;
 
-	if (left < (size - 1) && right < (size - 1))
+	if (left < size && right < size)
 		largest = (array[left] > array[right]) ? left : right;
 	else
 		largest = (right < size) ? right : left;
+	/* printf("largest: %u\n", array[largest]); */
 
 	if (array[largest] > array[i])
 	{
@@ -40,15 +41,16 @@ void heap_delete(int *array, size_t orig_size, size_t size)
 {
 	int tmp;
 
-	if (size == 1)
-	return;
-
 	tmp = array[0];
 	array[0] = array[size - 1];
 	array[size - 1] = tmp;
-	print_array(array, orig_size);
 	heapify(array, orig_size, size - 1, 0);
-	heap_delete(array, orig_size, size - 1);
+	print_array(array, orig_size);
+	/* printf("size: %lu\n", size); */
+	if (size > 1)
+	{
+		heap_delete(array, orig_size, size - 1);
+	}
 }
 
 /**
