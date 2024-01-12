@@ -4,16 +4,18 @@ import requests
 
 BASE_URL = 'http://reddit.com/r/{}/hot.json'
 
+
 def count_words(subreddit, word_list):
-    hot_list=[]
-    after=None
+    hot_list = []
+    after = None
 
     # Set up headers and parameters for the HTTP request
     headers = {}
     params = {'limit': 100}
 
     while(after != "STOP"):
-        # there is an ID of the last processed post add it to the request parameter
+        # there is an ID of the last processed post add it to
+        # the request parameter
         if isinstance(after, str) and after != "STOP":
             params['after'] = after
 
