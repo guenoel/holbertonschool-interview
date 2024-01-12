@@ -13,7 +13,7 @@ def count_words(subreddit, word_list):
     headers = {}
     params = {'limit': 100}
 
-    while(after != "STOP"):
+    while (after != "STOP"):
         # there is an ID of the last processed post add it to
         # the request parameter
         if isinstance(after, str) and after != "STOP":
